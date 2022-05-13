@@ -47,5 +47,5 @@ class Traversal(object):
       return res
 
 ob1 = Traversal()  
-root = create_tree([10,5,15,2,7,None,20])
+root = create_tree([10,5,15,2,7,20])
 print(ob1.inorderTraversal(root)) 

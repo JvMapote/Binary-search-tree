@@ -1,10 +1,8 @@
-class TreeNode:
+class TreeExcer:
    def __init__(self, data, left = None, right = None):
       self.data = data
       self.left = left
       self.right = right
-
-
 def insertData(temp,data):
    dataQueue = []
    dataQueue.append(temp)
@@ -12,19 +10,17 @@ def insertData(temp,data):
       temp = dataQueue[0]
       dataQueue.pop(0)
       if (not temp.left):
-         temp.left = TreeNode(data)
+         temp.left = TreeExcer(data)
          break
       else:
          dataQueue.append(temp.left)
       if (not temp.right):
-         temp.right = TreeNode(data)
+         temp.right = TreeExcer(data)
          break
       else:
          dataQueue.append(temp.right)
-
-
 def create_tree(elements):
-   Tree = TreeNode(elements[0])
+   Tree = TreeExcer(elements[0])
    for element in elements[1:]:
       insertData(Tree, element)
    return Tree
@@ -45,7 +41,6 @@ class Traversal(object):
             res.append(node.data)
          current = node.right
       return res
-
 ob1 = Traversal()  
 root = create_tree([10,5,15,2,7,20])
 print(ob1.inorderTraversal(root)) 

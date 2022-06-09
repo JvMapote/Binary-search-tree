@@ -1,3 +1,4 @@
+
 class TreeExcer:
    def __init__(self, data, left = None, right = None):
       self.data = data
